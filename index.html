@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TANVEER's portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS for smooth scrolling -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 min-h-screen font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav id="main-nav" class="fixed top-0 z-50 w-full bg-white shadow-xl backdrop-blur-sm bg-opacity-80">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open text-green-600"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                <h1 class="text-2xl font-bold text-gray-900 hidden md:block">
+                    MY PORTFOLIO
+                </h1>
+            </div>
+            <ul class="flex space-x-4 text-sm md:text-lg font-medium">
+                <li>
+                    <a href="#home" id="nav-home" class="nav-link flex items-center space-x-2 p-2 rounded-lg transition duration-300 text-green-600 bg-green-50">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-home"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        <span class="hidden md:block">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#skills" id="nav-skills" class="nav-link flex items-center space-x-2 p-2 rounded-lg transition duration-300 text-gray-800 hover:text-green-600 hover:bg-green-50">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <span class="hidden md:block">Skills</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#experience" id="nav-experience" class="nav-link flex items-center space-x-2 p-2 rounded-lg transition duration-300 text-gray-800 hover:text-green-600 hover:bg-green-50">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        <span class="hidden md:block">Experience</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects" id="nav-projects" class="nav-link flex items-center space-x-2 p-2 rounded-lg transition duration-300 text-gray-800 hover:text-green-600 hover:bg-green-50">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        <span class="hidden md:block">Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" id="nav-contact" class="nav-link flex items-center space-x-2 p-2 rounded-lg transition duration-300 text-gray-800 hover:text-green-600 hover:bg-green-50">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        <span class="hidden md:block">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4">
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center p-8 pt-24">
+            <div class="relative w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-green-600 shadow-xl transform hover:scale-105 transition-transform duration-300">
+                <img
+                    src="tri.jpeg"
+                    alt="tanveer"
+                    class="object-cover w-100 h-"
+                />
+            </div>
+            <h2 class="text-5xl md:text-7xl font-extrabold text-gray-900 leading-tight">
+                Hi, I'm a <span class="text-green-600">Tanveer Rabbani</span>
+            </h2>
+            <p class="mt-4 text-xl md:text-2xl max-w-2xl text-gray-600 animate-fade-in-up">
+                Aspiring DevOps Engineer passionate about building and automating cloud infrastructure on AWS and Azure.
+            </p>
+            <div class="mt-8 flex gap-4 animate-fade-in-up delay-300">
+                <a href="#" class="bg-green-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-green-500 transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text inline mr-2"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                    Download Resume
+                </a>
+                <a href="#contact" class="border-2 border-green-600 text-green-600 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-green-600 hover:text-white transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail inline mr-2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    Get In Touch
+                </a>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 md:py-32">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">My Skills</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Cloud Infrastructure Card -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-200 hover:border-green-600 transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="flex items-center justify-center text-green-600 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center text-gray-900 mb-4">Cloud Infrastructure</h3>
+                    <ul class="space-y-3 text-lg text-gray-600">
+                        <li class="flex items-start space-x-3"><span class="text-green-600 mt-1">•</span> <span>AWS Services (EC2, S3, Lambda, IAM, VPC)</span></li>
+                        <li class="flex items-start space-x-3"><span class="text-green-600 mt-1">•</span> <span>Learning Azure Fundamentals</span></li>
+                    </ul>
+                </div>
+
+                <!-- DevOps Tools Card -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-200 hover:border-green-600 transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="flex items-center justify-center text-green-600 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-git-branch"><line x1="6" x2="6" y1="3" y2="15"/><path d="M18 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M6 18a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M18 18a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M6 15v3c0 2.65 3.58 4 6 4s6-1.35 6-4v-3"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center text-gray-900 mb-4">DevOps Tools</h3>
+                    <ul class="space-y-3 text-lg text-gray-600">
+                        <li class="flex items-start space-x-3"><span class="text-green-600 mt-1">•</span> <span>Terraform for Infrastructure as Code</span></li>
+                        <li class="flex items-start space-x-3"><span class="text-green-600 mt-1">•</span> <span>Git & GitHub for Version Control</span></li>
+                        <li class="flex items-start space-x-3"><span class="text-green-600 mt-1">•</span> <span>Docker & Kubernetes (Learning)</span></li>
+                    </ul>
+                </div>
+
+                <!-- Programming Languages Card -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-200 hover:border-green-600 transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="flex items-center justify-center text-green-600 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center text-gray-900 mb-4">Programming & Scripting</h3>
+                    <ul class="space-y-3 text-lg text-gray-600">
+                        <li class="flex items-start space-x-3"><span class="text-green-600 mt-1">•</span> <span>JavaScript</span></li>
+                        <li class="flex items-start space-x-3"><span class="text-green-600 mt-1">•</span> <span>Python</span></li>
+                        <li class="flex items-start space-x-3"><span class="text-green-600 mt-1">•</span> <span>Bash Scripting</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 md:py-32">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">Experience</h2>
+            <div class="relative border-l-4 border-green-600 ml-4 pl-8 md:pl-16">
+                <div class="mb-12 relative">
+                    <div class="absolute w-4 h-4 bg-green-600 rounded-full -left-10 md:-left-12 top-2"></div>
+                    <h3 class="text-3xl font-bold text-gray-900">D4 Inshight Services</h3>
+                    <p class="text-lg font-medium text-gray-600 mt-2">Internship | May 2024 - Present</p>
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        During my internship at D4 Inshight, a service-based company, I gained valuable hands-on experience in a professional environment. I focused on understanding software development life cycles and collaborated with team members on various tasks. My key responsibilities included:
+                    </p>
+                    <ul class="list-disc list-inside mt-4 space-y-2 text-gray-700">
+                        <li>Assisting in the deployment and maintenance of applications.</li>
+                        <li>Learning about different cloud technologies and their applications.</li>
+                        <li>Participating in code reviews and team meetings.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 md:py-32">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">Projects</h2>
+            <div class="grid gap-8">
+                <!-- Project Card -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-200 hover:border-green-600 transform hover:-translate-y-2 transition-all duration-300">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Chatbot Application on AWS</h3>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        A serverless chatbot application deployed on AWS. This project demonstrates my skills in cloud infrastructure and IaC by using services like Lambda and API Gateway, all provisioned with Terraform.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-2 mb-4">
+                        <span class="bg-green-600 text-white text-sm font-semibold px-3 py-1 rounded-full">AWS</span>
+                        <span class="bg-green-600 text-white text-sm font-semibold px-3 py-1 rounded-full">Terraform</span>
+                        <span class="bg-green-600 text-white text-sm font-semibold px-3 py-1 rounded-full">Lambda</span>
+                        <span class="bg-green-600 text-white text-sm font-semibold px-3 py-1 rounded-full">API Gateway</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">Get In Touch</h2>
+            <p class="text-center text-lg text-gray-600 max-w-xl mx-auto mb-12">
+                I'm currently seeking my first full-time role and would love to connect! Feel free to reach out to me.
+            </p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-lg text-center border border-gray-200 hover:border-green-600 transform hover:-translate-y-2 transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail text-green-600 mx-auto mb-4"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <p class="text-xl font-semibold text-gray-900">Email</p>
+                    <a href="tnvrrabbani@gmail.com" class="block mt-2 text-green-600 hover:underline">tnvrrabbani@gmail.com</a>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-lg text-center border border-gray-200 hover:border-green-600 transform hover:-translate-y-2 transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github text-green-600 mx-auto mb-4"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.37-1-3.37.25-.87.25-2.37 0-3.37s-2-.75-3.37 0c-1.25-.08-2.37.27-3.37 1-1.3-.08-2.6-.08-3.9 0-1.25-.08-2.37.27-3.37 1-1.3.08-2.6.08-3.9 0-.62.87-.62 2.37 0 3.37.73 1 1.6 1.6 2.5 2.1a4.8 4.8 0 0 0-1 3.5v4"/><path d="M9 18v-2a4.8 4.8 0 0 1-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.37-1-3.37.25-.87.25-2.37 0-3.37s-2-.75-3.37 0c-1.25-.08-2.37.27-3.37 1-1.3-.08-2.6-.08-3.9 0-1.25-.08-2.37.27-3.37 1-1.3.08-2.6.08-3.9 0-.62.87-.62 2.37 0 3.37.73 1 1.6 1.6 2.5 2.1a4.8 4.8 0 0 0-1 3.5v4M12 18v-2a4.8 4.8 0 0 1-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.37-1-3.37.25-.87.25-2.37 0-3.37s-2-.75-3.37 0c-1.25-.08-2.37.27-3.37 1-1.3-.08-2.6-.08-3.9 0-1.25-.08-2.37.27-3.37 1-1.3.08-2.6.08-3.9 0-.62.87-.62 2.37 0 3.37.73 1 1.6 1.6 2.5 2.1a4.8 4.8 0 0 0-1 3.5v4"/></svg>
+                    <p class="text-xl font-semibold text-gray-900">GitHub</p>
+                    <a href="https://github.com/tanveer91599-commits" target="_blank" rel="noopener noreferrer" class="block mt-2 text-green-600 hover:underline">tanveer comits</a>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-lg text-center border border-gray-200 hover:border-green-600 transform hover:-translate-y-2 transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin text-green-600 mx-auto mb-4"><path d="M16 8a6 6 0 0 1 6 6v7H18v-7a3 3 0 0 0-3-3h-2.5a3 3 0 0 0-3 3v7H7v-7a6 6 0 0 1 6-6zM4 21V9a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2z"/></svg>
+                    <p class="text-xl font-semibold text-gray-900">LinkedIn</p>
+                    <a href="https://www.linkedin.com/in/tanveer-rabbani-a-870729362?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" class="block mt-2 text-green-600 hover:underline">your-profile</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-8 text-center text-gray-600">
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript to handle active navigation link on scroll -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            function updateActiveLink() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('text-green-600', 'bg-green-50');
+                    link.classList.add('text-gray-800', 'hover:text-green-600', 'hover:bg-green-50');
+                    if (link.href.includes(current)) {
+                        link.classList.add('text-green-600', 'bg-green-50');
+                        link.classList.remove('text-gray-800', 'hover:text-green-600', 'hover:bg-green-50');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', updateActiveLink);
+            updateActiveLink(); // Call on load to set initial state
+        });
+    </script>
+</body>
+</html>
